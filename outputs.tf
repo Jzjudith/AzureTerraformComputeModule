@@ -5,11 +5,11 @@ output "resource_group_name" {
 
 output "location" {
   description = "The name of the location"
-  value = azurerm_resource_group.example.location
+  value       = azurerm_resource_group.example.location
 }
 
 output "virtual_network_name" {
-  description = "The name of the virtual network" 
+  description = "The name of the virtual network"
   value       = azurerm_virtual_network.example.name
 }
 
@@ -24,8 +24,8 @@ output "cidr_prefixes" {
 }
 
 output "subnet_id" {
-  description = "The name of the subnet" 
-  value = azurerm_subnet.example.id
+  description = "The name of the subnet"
+  value       = azurerm_subnet.example.id
 }
 
 output "public_ip_name" {
@@ -38,15 +38,15 @@ output "public_ip_address" {
   value       = azurerm_public_ip.example.ip_address
 }
 
-output "network_interface_id" {
+output "network_interface_ids" {
   description = "The id of the networl interface."
   value       = azurerm_network_interface.example.id
 }
 
 
 output "tags" {
-  description = "A mapping of tags which should be assigned to the Resource Group."
-  value       = var.tags
+  description = "The tags assiociated with the resources."
+  value       = azurerm_resource_group.example.tags
 }
 
 
