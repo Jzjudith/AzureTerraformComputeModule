@@ -34,21 +34,11 @@ variable "cidr_prefixes" {
   default     = ["10.0.1.0/24"]
 }
 
-# variable "subnet_id" {
-#   type = string
-#  description = "The subnet id"
-#   }
-
 variable "public_ip_name" {
   type        = string
   description = "The name of the Public IP."
   default     = "compute-pip"
 }
-
-# variable "public_ip_address_id" {
-#   type = string
-#   description = "The public ip address id"
-# }
 
 variable "network_interface_name" {
   type        = string
@@ -56,28 +46,23 @@ variable "network_interface_name" {
   default     = "compute-nic"
 }
 
-# variable "network_interface_id" {
-#   type = string
-#   description = "The network interface id"
-# }
-
 variable "ip_config_name" {
   type        = string
   description = "The name of the ip confuguration of the network interface"
   default     = "computeipconfig"
-} 
+}
 
 variable "virtual_machine_name" {
   type        = string
   description = "The name of the virtual machine"
-  default = "compute-machine"
+  default     = "compute-machine"
 }
 
 variable "tags" {
   type        = map(string)
-  description = "A mapping of tags which should be assigned to the Resource Group."
-  default = {
-    environment = "Development"
+  description = "The tags assiociated with the resources."
+  default  = {  
+   enviroment = "Development"
   }
 }
 
