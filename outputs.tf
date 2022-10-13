@@ -38,6 +38,11 @@ output "public_ip_address" {
   value       = azurerm_public_ip.example.ip_address
 }
 
+output "public_ip_address_id" {
+  description = "The id the Public IP Address."
+  value       = azurerm_public_ip.example.id
+}
+
 output "network_interface_ids" {
   description = "The id of the networl interface."
   value       = azurerm_network_interface.example.id
